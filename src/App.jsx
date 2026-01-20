@@ -23,7 +23,7 @@ function App() {
         
           </div>
           <div className={styles.column2}>
-              <img src={`${import.meta.env.BASE_URL}quoc profile.png`} alt="profile photo" style={{width: '90%', height: 'auto', borderRadius: '10px', marginBottom: '10px', marginTop: '20px', WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
+              <img src={`${import.meta.env.BASE_URL}quoc_profile.png`} alt="profile photo" style={{width: '90%', height: 'auto', borderRadius: '10px', marginBottom: '10px', marginTop: '20px', WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
     maskImage: 'radial-gradient(circle, black 0%, transparent 100%)'}} />
               <p style={{fontFamily: 'Arial, sans-serif', fontSize: '0.95em', color: '#ffffff'}}><i>"Every effort today is a foundation for a stronger <br/>version of me tomorrow."</i></p>
           </div>
