@@ -24,7 +24,7 @@ function App() {
           </div>
           <div className={styles.column2}>
               <img 
-  src={`${import.meta.env.BASE_URL}quoc_profile.png`} 
+  src="/Portfolio-Website-Michael-Bui/quoc_profile.png"
   alt="profile photo" 
   style={{
     width: '90%', 
