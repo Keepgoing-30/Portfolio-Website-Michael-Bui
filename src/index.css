@@ -13,6 +13,7 @@ body, html {
   position: relative;
   background-image: radial-gradient(circle, #090E13, #091018, #0b1420, #011f55, #000000);
   background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Thêm vào file CSS tổng của dự án */
