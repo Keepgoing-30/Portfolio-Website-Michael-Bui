@@ -107,9 +107,9 @@ function App() {
             name="Spencer Ingley"
             title="Associate Professor of Biology BYU - Hawaii"
             date="Jan 2025"
-            comment="This guy is a great developer! His CSS skills are top-notch. Besides that, he is a team player and always willing to help others."
-            imageUrl="/Portfolio-Website-Michael-Bui/ingley.jpg"
-            linkedinUrl="https://www.linkedin.com/in/spencer-ingley-28394954/"
+            comment="Working with Michael, I observed a rare combination of efficiency and deep observation. He didn't just work fast; he improved how we worked by identifying and solving process bottlenecks that caused team fatigue. His natural inclination toward analyzing systems and solving real-world problems makes him a valuable asset to any technical team. He is a focused, consistent, and highly capable problem solver."
+            imageUrl="/Portfolio-Website-Michael-Bui/shine.jpg"
+            linkedinUrl="https://www.linkedin.com/in/shinehah-remion/"
           />
           </div>
           <div className={styles.column5}>
@@ -141,7 +141,7 @@ function App() {
                 <section className={styles.carouselSection}>
                   <CertificateCarousel />
                 </section>
-        <div className={styles.section} style={{flexDirection: 'column', alignItems: 'center', padding: '20px'}}>
+        <div className={styles.section} style={{flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#1a1919', maxWidth: '100vw', width: '100%'}}>
           <h2 style={{color: '#ffffff', fontSize: '1em', fontWeight: 'normal', marginBottom: '10px', marginTop: '10px'}}>© 2026 Michael Bui. All rights reserved.</h2>
         </div>
     </div>

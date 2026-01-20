@@ -32,6 +32,6 @@ p {
 
 .siteBackGround {
   padding-top: 70px; /* Thêm khoảng cách trên để tránh bị che khuất bởi navigation bar */
-  padding-bottom: 70px;
+  padding-bottom: 0px;
 }
  
