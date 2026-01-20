@@ -1,0 +1,36 @@
+/* Reset lại toàn bộ margin và padding mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Cấm cuộn ngang tuyệt đối */
+  position: relative;
+  background-image: radial-gradient(circle, #090E13, #091018, #0b1420, #011f55, #000000);
+  background-attachment: fixed;
+}
+
+/* Thêm vào file CSS tổng của dự án */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 0.9em;
+  color: #ddd9d9;
+  margin-top: 5px;
+}
+
+.siteBackGround {
+  padding-top: 70px; /* Thêm khoảng cách trên để tránh bị che khuất bởi navigation bar */
+  padding-bottom: 70px;
+}
+ 

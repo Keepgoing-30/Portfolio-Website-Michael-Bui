@@ -1,0 +1,310 @@
+.navWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  /* 1. Đảm bảo nền có độ trong suốt thấp (0.1 - 0.4) để thấy mờ rõ hơn */
+  background-color: rgba(var(--tint-color), 0.1); 
+  
+  /* 2. Sửa lại backdrop-filter (Thêm tiền tố cho Safari) */
+  -webkit-backdrop-filter: blur(20px); /* Dùng con số trực tiếp để kiểm tra trước */
+  backdrop-filter: blur(20px); 
+
+  /* 3. Sửa lại box-shadow đúng cú pháp */
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+              0 10px 30px rgba(0, 0, 0, 0.2);
+
+  /* 4. Định dạng viền và bo góc */
+  border-radius: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  /* Đảm bảo nội dung không bị tràn */
+  overflow: hidden; 
+  position: relative; /* Quan trọng để định vị lớp ánh sáng */
+  overflow: hidden; /* Cắt bớt phần ánh sáng thừa bên ngoài */
+  z-index: 1; /* Đảm bảo nội dung bên trong nằm trên lớp ánh sáng */
+  border: none;
+  
+  /*Cách cố định navigationbar ở trên cùng*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+  border: none;
+}
+
+
+
+/* navigation bar horizontal on desktop */
+.navWrapper {
+  flex-direction: row;
+}
+
+/* use media query to make navigation bar vertical on mobile */
+@media (max-width: 768px) {
+  .navWrapper {
+    flex-direction: column; /* Change to column on small screens */
+    gap: 15px; /* Add some space between items */
+  }
+}
+
+/*xóa dấu chấm tròn ở trước navigation bar */
+.navWrapper ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-direction: row;
+  gap: 30px; /* Space between items */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .navWrapper ul {
+    flex-direction: column; /* Stack items vertically on small screens */
+    gap: 15px; /* Add some space between items */
+    align-items: center; /* Center items horizontally */
+  }
+}
+
+.navWrapper a {
+  text-decoration: none; /* Remove underline from links */
+  color: #ffffff; /* Link color */
+  font-size: 1.2em; /* Increase font size */
+  font-weight: 500;         /* Độ dày vừa phải */
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navWrapper a:hover {
+  background-color: #7f7f80; /* Background color on hover */
+  color: #ffffff; /* Text color on hover */
+
+  /* Tạo hiệu ứng ánh sáng (Glow) xung quanh chữ
+  text-shadow: 0 0 10px #d74de9, 0 0 20px #d74de9;  */
+  
+  /* Nếu bạn muốn có thêm viền sáng nhẹ */
+  box-shadow: 0 0 15px rgba(61, 61, 61, 0.4);
+}
+
+/* Tia sáng dưới chân hộp */
+.navWrapper::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  /* Căn giữa tia sáng vào đúng vị trí chuột */
+  left: var(--mouse-x, -100%); /* Mặc định ẩn tia sáng ra ngoài */
+  transform: translateX(-50%); /* Đảm bảo tâm tia sáng nằm đúng con trỏ */
+  
+  width: 1000px; /* Độ dài tia sáng */
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #3d5db4, transparent);
+  box-shadow: 0 0 10px #468efa;
+  transition: left 0.1s ease-out, opacity 0.3s ease; /* Giúp tia sáng lướt mượt theo chuột */
+  z-index: -1; /* Đặt phía sau nội dung */
+  pointer-events: none; /* Tránh cản trở việc click vào menu */
+  opacity: 0;
+}
+
+/* Chỉ hiện tia sáng khi chuột nằm trong Navbar */
+.navWrapper:hover::before {
+  opacity: 1;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.buttonGroup {
+  display: inline-flex;
+  gap: 10px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 10px;
+  backdrop-filter: blur(16px);
+  border-radius: 8px;
+  position: relative; /* Quan trọng để định vị lớp ánh sáng */
+  overflow: hidden; /* Cắt bớt phần ánh sáng thừa bên ngoài */
+  z-index: 1;
+}
+
+
+/* Tạo một lớp phủ bên trong để che phần giữa, chỉ để lộ phần viền */
+.buttonGroup::after {
+  content: '';
+  position: absolute;
+  inset: 2px; /* Độ dày của border (ở đây là 2px) */
+  background-color: #1e1e1e;
+  backdrop-filter: blur(16px); /* Phải trùng với màu nền của hộp */
+  border-radius: 6px;
+  z-index: -1;
+}
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #0a5e96;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #1d375c;
+  }
+
+}
+
+ 
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* border: 1px solid #ffffff; */
+  margin-top: 50px;
+  width: 95%;
+  /* max-width: 1200px; */
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+  max-width: 100vw; 
+  overflow: hidden;
+}
+
+.column1 {
+  display: flex;
+  flex: 7;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(var(--tint-color), 0.1);
+  border: #2f7cd8 solid 1px; 
+  
+  
+}
+
+.column2 {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  /* Cập nhật Gradient tối hơn để hợp với ảnh chân dung */
+  /* background-image: linear-gradient(to right, #111214, #141517, #17181b, #191b1e, #1c1e21, #1c1e21, #1c1e21, #1c1e21, #191b1e, #17181b, #141517, #111214); */
+  
+  border: #2f7cd8 solid 1px;
+  overflow: hidden; /* Cắt bớt phần thừa nếu ảnh to hơn cột */ 
+}
+
+.column3 {
+  display: flex;
+  flex: 10;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+  text-align: justify;
+  padding: 100px;
+  background-color: rgba(var(--tint-color), 0.1);
+  border: #2f7cd8 solid 1px;  
+  
+}
+
+.skillbox1 {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(var(--tint-color), 0.1);
+  
+}
+
+.pythonskills {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Căn giữa chữ theo chiều dọc */
+  gap: 15px;           /* Khoảng cách giữa các chữ */
+  padding: 5px 15px;   /* Padding trên/dưới 5px, trái/phải 15px */
+  background-color: #6ab86a;
+  border-radius: 8px;
+  width: fit-content;  /* Quan trọng: Để thanh không dài hết màn hình */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  
+}
+
+.pythonskills p {
+  margin: 0;           /* Xóa bỏ margin mặc định để không làm lệch thanh */
+  color:#111214
+}
+
+
+.column4 {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: right;
+  justify-content: right; /* Căn giữa nội dung theo chiều dọc */
+  text-align: justify;
+  padding: 30px;
+  border: #2f7cd8 solid 1px;
+  /* Thêm họa tiết lưới nền nhẹ */
+  background-color: rgba(var(--tint-color), 0.1);  
+  /* background-image: linear-gradient(90deg, #1e1e1e 1px, transparent 0),
+    linear-gradient(180deg, #1e1e1e 1px, transparent 0);
+  background-position: 50%;
+  background-size: 40px 40px; */
+  /* transform: rotate(34deg); Xoay nhẹ để tạo hiệu ứng động */
+}
+
+.column5 {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: right;
+  justify-content: right; /* Căn giữa nội dung theo chiều dọc */
+  text-align: justify;
+  padding: 30px;
+  border: #2f7cd8 solid 1px; 
+  /* Cách thêm pattern chấm tròn nhẹ nhàng vào nền */
+  background-color: rgba(var(--tint-color), 0.1);
+  /* background-image: radial-gradient(circle at 3px 3px, #d82fbc 3px, transparent 0);
+  background-position: 50%;
+  background-size: 20px 20px; */
+
+}
+
+.column6 {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: right;
+  justify-content: right; /* Căn giữa nội dung theo chiều dọc */
+  text-align: justify;
+  padding: 30px;
+  background-color: rgba(var(--tint-color), 0.1);
+  border: #2f7cd8 solid 1px; 
+}
+
+
+.carouselSection {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
