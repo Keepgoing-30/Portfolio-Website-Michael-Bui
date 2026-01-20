@@ -104,8 +104,8 @@ function App() {
         <div className={styles.section}>
           <div className={styles.column4}>
               <TestimonialCard 
-            name="Spencer Ingley"
-            title="Associate Professor of Biology BYU - Hawaii"
+            name="Shinehah Remion"
+            title="Business Management in HR and Marketing-BYUH"
             date="Jan 2025"
             comment="Working with Michael, I observed a rare combination of efficiency and deep observation. He didn't just work fast; he improved how we worked by identifying and solving process bottlenecks that caused team fatigue. His natural inclination toward analyzing systems and solving real-world problems makes him a valuable asset to any technical team. He is a focused, consistent, and highly capable problem solver."
             imageUrl="/Portfolio-Website-Michael-Bui/shine.jpg"
