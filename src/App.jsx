@@ -108,7 +108,7 @@ function App() {
             title="Associate Professor of Biology BYU - Hawaii"
             date="Jan 2025"
             comment="This guy is a great developer! His CSS skills are top-notch. Besides that, he is a team player and always willing to help others."
-            imageUrl="/public/ingley.jpg"
+            imageUrl="/Portfolio-Website-Michael-Bui/ingley.jpg"
             linkedinUrl="https://www.linkedin.com/in/spencer-ingley-28394954/"
           />
           </div>
@@ -118,7 +118,7 @@ function App() {
             title="Professor of Pathology at University of Oklahoma Health Sciences Center"
             date="Jan 2026"
             comment="In working with Micheal when he was a volunteer in Vietnam, I found him to be a very dedicated hard worker. He managed complex issues with many types of people quite well and yet also remained focused on his core purposes. He is very even tempered and was never frustrated, despite some very challenging co-workers."
-            imageUrl="/public/hussel.jpg"
+            imageUrl="/Portfolio-Website-Michael-Bui/hussel.jpg"
             linkedinUrl="https://www.linkedin.com/in/lewis-hassell-6898966/"
           />
           </div>
@@ -128,7 +128,7 @@ function App() {
             title="The former supervisor at the Polynesian Cultural Center-Hawaii"
             date="Jan 2026"
             comment="I am Julius Such, former supervisor of Michael Bui at the Polynesian Cultural Center on the Smoothie Team. During a challenging period when the position had high turnover, Michael consistently stepped up, improved our work processes, and helped make the team more efficient. He was also a great teammate who contributed to a positive work environment."
-            imageUrl="/public/julius.jpeg"
+            imageUrl="/Portfolio-Website-Michael-Bui/julius.jpeg"
             linkedinUrl="https://www.linkedin.com/in/julius-such-060a091b5/"
           />
           </div>
