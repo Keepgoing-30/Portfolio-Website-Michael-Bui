@@ -1,4 +1,4 @@
-***Portfolio Website | Michael Bui***
+**Portfolio Website | Michael Bui**
 
 Welcome to my professional portfolio website. This project serves as a comprehensive showcase of my journey as a Software Engineering student at Ensign College, highlighting my technical skills, certifications, and real-world project experiences.
 
@@ -6,7 +6,7 @@ Welcome to my professional portfolio website. This project serves as a comprehen
 
 This website is a high-performance, responsive single-page application (SPA) built with React and Vite. It is designed to reflect my dual passion for robust software architecture and clean, user-centric UI/UX design.
 
-Key Features
+**Key Features**
 
   * Infinite Scrolling Carousel: A custom-built, Framer Motion-powered carousel that showcases my professional certifications from LinkedIn Learning and other institutions.
   
@@ -38,7 +38,7 @@ Key Features
 
 **🔧 Installation & Setup**
 
-      To run this project locally, follow these steps:
+   To run this project locally, follow these steps:
 
 **1. Clone the repository:**
 
@@ -57,6 +57,6 @@ Key Features
 
 **📈 Professional Philosophy**
 
-    "Every effort today is a foundation for a stronger version of me tomorrow."
+   "Every effort today is a foundation for a stronger version of me tomorrow."
 
-  This portfolio is not just a collection of code but a reflection of my commitment to continuous learning and technical excellence as I prepare for my career in the Utah tech ecosystem.
+   This portfolio is not just a collection of code but a reflection of my commitment to continuous learning and technical excellence as I prepare for my career in the Utah tech ecosystem.
