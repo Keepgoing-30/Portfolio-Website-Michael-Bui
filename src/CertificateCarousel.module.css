@@ -1,105 +1,103 @@
 .container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 40px 0;
-  background: rgba(var(--tint-color), 0.1);
-    /* 2. Sửa lại backdrop-filter (Thêm tiền tố cho Safari) */
-  -webkit-backdrop-filter: blur(20px); /* Dùng con số trực tiếp để kiểm tra trước */
-  backdrop-filter: blur(20px); 
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 40px 0;
+	background: rgba(var(--tint-color), 0.1);
+	/* 2. Sửa lại backdrop-filter (Thêm tiền tố cho Safari) */
+	-webkit-backdrop-filter: blur(20px); /* Dùng con số trực tiếp để kiểm tra trước */
+	backdrop-filter: blur(20px);
 
-  /* 3. Sửa lại box-shadow đúng cú pháp */
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
-              0 10px 30px rgba(0, 0, 0, 0.2);
+	/* 3. Sửa lại box-shadow đúng cú pháp */
+	box-shadow:
+		inset 0 0 20px rgba(255, 255, 255, 0.5),
+		0 10px 30px rgba(0, 0, 0, 0.2);
 
-  /* 4. Định dạng viền và bo góc */
-  border-radius: 1px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  
-  
-  
+	/* 4. Định dạng viền và bo góc */
+	border-radius: 1px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Hiệu ứng mờ 2 đầu */
 .container::before,
 .container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 120px; /* Rộng hơn để làm mờ ảnh */
-  height: 100%;
-  z-index: 2;
-  pointer-events: none; /* Quan trọng: để người dùng vẫn click vào được */
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 120px; /* Rộng hơn để làm mờ ảnh */
+	height: 100%;
+	z-index: 2;
+	pointer-events: none; /* Quan trọng: để người dùng vẫn click vào được */
 }
 
 .container::before {
-  left: 0;
-  background: linear-gradient(to right, #1a1a1a 0%, transparent 100%);
+	left: 0;
+	background: linear-gradient(to right, #1a1a1a 0%, transparent 100%);
 }
 
 .container::after {
-  right: 0;
-  background: linear-gradient(to left, #1a1a1a 0%, transparent 100%);
+	right: 0;
+	background: linear-gradient(to left, #1a1a1a 0%, transparent 100%);
 }
 
 .scrollWrapper {
-  display: flex;
-  width: fit-content; /* Quan trọng để flexbox hoạt động */
-  gap: 30px; /* Khoảng cách giữa các chứng chỉ */
-  /* Đảm bảo transition của Framer Motion có thể bị can thiệp */
-  will-change: transform;
+	display: flex;
+	width: fit-content; /* Quan trọng để flexbox hoạt động */
+	gap: 30px; /* Khoảng cách giữa các chứng chỉ */
+	/* Đảm bảo transition của Framer Motion có thể bị can thiệp */
+	will-change: transform;
 }
 
 .certItem {
-  display: flex;
-  flex-direction: column; /* Sắp xếp ảnh và chữ theo chiều dọc */
-  align-items: center;
-  text-align: center;
-  background: #262626;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 15px;
-  text-decoration: none; /* Bỏ gạch chân link */
-  color: #fff;
-  transition: all 0.3s ease;
-  min-width: 280px; /* Kích thước tối thiểu cho mỗi hộp */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: column; /* Sắp xếp ảnh và chữ theo chiều dọc */
+	align-items: center;
+	text-align: center;
+	background: #262626;
+	border: 1px solid #333;
+	border-radius: 12px;
+	padding: 15px;
+	text-decoration: none; /* Bỏ gạch chân link */
+	color: #fff;
+	transition: all 0.3s ease;
+	min-width: 280px; /* Kích thước tối thiểu cho mỗi hộp */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Hiệu ứng đặc biệt khi di chuột vào từng chứng chỉ */
 .certItem:hover {
-  border-color: #2f7cd8; /* Viền màu xanh logo */
-  box-shadow: 0 8px 16px rgba(47, 124, 216, 0.4); /* Đổ bóng màu xanh */
-  color: #2f7cd8; /* Chữ cũng đổi màu */
+	border-color: #2f7cd8; /* Viền màu xanh logo */
+	box-shadow: 0 8px 16px rgba(47, 124, 216, 0.4); /* Đổ bóng màu xanh */
+	color: #2f7cd8; /* Chữ cũng đổi màu */
 }
 
 .certImage {
-  width: 250px; /* Chiều rộng ảnh thumbnail */
-  height: 150px; /* Chiều cao cố định để các ảnh không bị lệch */
-  object-fit: contain; /* Đảm bảo ảnh hiển thị đầy đủ mà không bị cắt */
-  border-radius: 8px;
-  margin-bottom: 10px;
-  background: #000; /* Nền đen cho ảnh nếu ảnh có nền trong suốt */
-  padding: 5px;
+	width: 250px; /* Chiều rộng ảnh thumbnail */
+	height: 150px; /* Chiều cao cố định để các ảnh không bị lệch */
+	object-fit: contain; /* Đảm bảo ảnh hiển thị đầy đủ mà không bị cắt */
+	border-radius: 8px;
+	margin-bottom: 10px;
+	background: #000; /* Nền đen cho ảnh nếu ảnh có nền trong suốt */
+	padding: 5px;
 }
 
 .certTitle {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: inherit; /* Kế thừa màu từ thẻ cha */
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: inherit; /* Kế thừa màu từ thẻ cha */
 }
 
 /* KHI DI CHUỘT HOẶC CHẠM VÀO CONTAINER, DỪNG ANIMATION TẠI CHỖ */
 .container:hover .scrollWrapper {
-  transform: none !important; /* Lưu ý: Cách này có thể làm ảnh nhảy về đầu, hãy cẩn thận */
-  /* Cách tốt hơn là dùng pause nếu bạn chuyển hẳn sang CSS Animation */
+	transform: none !important; /* Lưu ý: Cách này có thể làm ảnh nhảy về đầu, hãy cẩn thận */
+	/* Cách tốt hơn là dùng pause nếu bạn chuyển hẳn sang CSS Animation */
 
-  /* Thêm dòng dưới đây để hỗ trợ Framer Motion trên một số trình duyệt */
-  -webkit-animation-play-state: paused !important;
-  animation-play-state: paused !important;
+	/* Thêm dòng dưới đây để hỗ trợ Framer Motion trên một số trình duyệt */
+	-webkit-animation-play-state: paused !important;
+	animation-play-state: paused !important;
 }
 
 /* Đảm bảo hiệu ứng mượt mà trên cả điện thoại */
 .container:active .scrollWrapper {
-  animation-play-state: paused !important;
+	animation-play-state: paused !important;
 }

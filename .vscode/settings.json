@@ -1,0 +1,43 @@
+{
+	"biome.enabled": true,
+	"biome.requireConfiguration": true,
+	"biome.suggestInstallingGlobally": false,
+	"biome.configurationPath": "./biome.json",
+	// editor
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.biome": "explicit"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"css.validate": true,
+	"css.lint.unknownAtRules": "ignore",
+	"files.eol": "\n",
+	// Git decorations
+	"scm.defaultViewMode": "tree",
+	"jestrunner.jestCommand": "npm run test --",
+	"git.decorations.enabled": true,
+	"git.enableSmartCommit": true,
+	"gitlens.hovers.currentLine.over": "line",
+	"gitlens.codeLens.enabled": false,
+	"search.useIgnoreFiles": false,
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/dist": true,
+		"**/build": true,
+		"**/out": true,
+		"**/.next": true,
+		"**/package-lock.json": true
+	}
+}
