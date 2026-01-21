@@ -1,156 +1,161 @@
-import Navigationbar from './Navigationbar.jsx';
 import styles from './App.module.css';
+import CertificateCarousel from './certificateCarousel.jsx';
+import Navigationbar from './Navigationbar.jsx';
 import SkillBar from './SkillBar.jsx';
 import TestimonialCard from './Testimonial.jsx';
-import CertificateCarousel from './certificateCarousel.jsx';
-
 
 function App() {
-  return (
-    <div className="siteBackGround"> 
-       
-          <Navigationbar />
-        <div className={styles.section}>
-          <div className={styles.column1}>
-              <h1>Hello, I am Michael!</h1>
-              <h2 style={{color: '#ffffff', fontSize: '1.2em', fontWeight: 'normal', marginBottom: '30px', marginTop: '10px'}}>Aspiring Frontend Software Engineer | Creative UX/UI Designer.</h2>
-            <div style={{display: 'flex', gap: '30px'}}>  
-            <button onClick={() => window.location.href = "https://github.com/Keepgoing-30"}>View GitHub </button>
-            <button onClick={() => window.location.href = "mailto:lovethebookofmormon@gmail.com"}>
-  Contact Me
-</button>
-            </div>
-        
-          </div>
-          <div className={styles.column2}>
-              <img 
-  src="/Portfolio-Website-Michael-Bui/quoc_profile.png"
-  alt="profile photo" 
-  style={{
-    width: '90%', 
-    height: 'auto', 
-    borderRadius: '10px', 
-    marginBottom: '10px', 
-    marginTop: '20px', 
-    WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
-    maskImage: 'radial-gradient(circle, black 0%, transparent 100%)'
-  }} 
-/>
-              <p style={{fontFamily: 'Arial, sans-serif', fontSize: '0.95em', color: '#ffffff'}}><i>"Every effort today is a foundation for a stronger <br/>version of me tomorrow."</i></p>
-          </div>
-        </div>
-         <div className={styles.section} style={{flexDirection: 'column', alignItems: 'center', padding: '5px'}}>
-          <h1 style={{color: '#ffffff', fontWeight: 'bold'}}>Skills</h1>
-          <p style={{color: '#ffffff', fontSize: '1.2em', fontWeight: 'normal', marginBottom: '2px', marginTop: '-10px'}}>Through various hands-on projects, I have developed a solid foundation in the following technologies to drive future success:</p>
-        </div>
-        <div className={styles.section} style={{flexDirection: 'column', alignItems: 'center', padding: '50px 0', border: '#2f7cd8 solid 1px'}}>          
-          
-         
-                  <div className={styles.skillbox1}>
-                    
-                        
-                              {/* Thanh màu xanh lá truyền thống */}
-                              <SkillBar name="Python" level="Intermediate" barColor="#B33232" />
-                   
-                              {/* Thanh màu vàng cho Javascript */}
-                              <SkillBar name="Javascript" level="Advanced" barColor="#4f9b1c" />
-    
-                              {/* Thanh màu tím cho Java */}
-                              <SkillBar name="Java" level="Intermediate" barColor="#b66004" />
+	return (
+		<div className='siteBackGround'>
+			<Navigationbar />
+			<div className={styles.section}>
+				<div className={styles.column1}>
+					<h1>Hello, I am Michael!</h1>
+					<h2 style={{ color: '#ffffff', fontSize: '1.2em', fontWeight: 'normal', marginBottom: '30px', marginTop: '10px' }}>
+						Aspiring Frontend Software Engineer | Creative UX/UI Designer.
+					</h2>
+					<div style={{ display: 'flex', gap: '30px' }}>
+						<button onClick={() => (window.location.href = 'https://github.com/Keepgoing-30')}>View GitHub </button>
+						<button onClick={() => (window.location.href = 'mailto:lovethebookofmormon@gmail.com')}>Contact Me</button>
+					</div>
+				</div>
+				<div className={styles.column2}>
+					<img
+						src='/Portfolio-Website-Michael-Bui/quoc_profile.png'
+						alt={`Michael's avatar`}
+						style={{
+							width: '90%',
+							height: 'auto',
+							borderRadius: '10px',
+							marginBottom: '10px',
+							marginTop: '20px',
+							WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
+							maskImage: 'radial-gradient(circle, black 0%, transparent 100%)',
+						}}
+					/>
+					<p style={{ fontFamily: 'Arial, sans-serif', fontSize: '0.95em', color: '#ffffff' }}>
+						<i>
+							"Every effort today is a foundation for a stronger <br />
+							version of me tomorrow."
+						</i>
+					</p>
+				</div>
+			</div>
+			<div className={styles.section} style={{ flexDirection: 'column', alignItems: 'center', padding: '5px' }}>
+				<h1 style={{ color: '#ffffff', fontWeight: 'bold' }}>Skills</h1>
+				<p style={{ color: '#ffffff', fontSize: '1.2em', fontWeight: 'normal', marginBottom: '2px', marginTop: '-10px' }}>
+					Through various hands-on projects, I have developed a solid foundation in the following technologies to drive future
+					success:
+				</p>
+			</div>
+			<div
+				className={styles.section}
+				style={{ flexDirection: 'column', alignItems: 'center', padding: '50px 0', border: '#2f7cd8 solid 1px' }}
+			>
+				<div className={styles.skillbox1}>
+					{/* Thanh màu xanh lá truyền thống */}
+					<SkillBar name='Python' level='Intermediate' barColor='#B33232' />
 
-                              {/* Thanh màu xanh biển cho React */}
-                              <SkillBar name="React" level="Advanced" barColor="#818804" />
+					{/* Thanh màu vàng cho Javascript */}
+					<SkillBar name='Javascript' level='Advanced' barColor='#4f9b1c' />
 
+					{/* Thanh màu tím cho Java */}
+					<SkillBar name='Java' level='Intermediate' barColor='#b66004' />
 
-                  </div>
-                  <div className={styles.skillbox1}>
-                        
-                              {/* Thanh màu xanh lá truyền thống */}
-                              <SkillBar name="CSS" level="Advanced" barColor="#1A477B" />
+					{/* Thanh màu xanh biển cho React */}
+					<SkillBar name='React' level='Advanced' barColor='#818804' />
+				</div>
+				<div className={styles.skillbox1}>
+					{/* Thanh màu xanh lá truyền thống */}
+					<SkillBar name='CSS' level='Advanced' barColor='#1A477B' />
 
-                              {/* Thanh màu vàng cho Node.js */}
-                              <SkillBar name="Node.js" level="Advanced" barColor="#6c31af" />
+					{/* Thanh màu vàng cho Node.js */}
+					<SkillBar name='Node.js' level='Advanced' barColor='#6c31af' />
 
-                              {/* Thanh màu tím cho HTML */}
-                              <SkillBar name="HTML" level="Advanced" barColor="#0597b1" />
+					{/* Thanh màu tím cho HTML */}
+					<SkillBar name='HTML' level='Advanced' barColor='#0597b1' />
 
-                              {/* Thanh màu xanh biển cho Agile */}
-                              <SkillBar name="Agile" level="Advanced" barColor="#6e929b" />
+					{/* Thanh màu xanh biển cho Agile */}
+					<SkillBar name='Agile' level='Advanced' barColor='#6e929b' />
+				</div>
 
-                            
-                  </div>
+				<div className={styles.skillbox1}>
+					{/* Thanh màu xanh lá truyền thống */}
+					<SkillBar name='SQL' level='Basic' barColor='#335348' />
 
-                   <div className={styles.skillbox1}>
-                        
-                              {/* Thanh màu xanh lá truyền thống */}
-                              <SkillBar name="SQL" level="Basic" barColor="#335348" />
+					{/* Thanh màu vàng cho Node.js */}
+					<SkillBar name='Tailwind CSS' level='Advanced' barColor='#5d8145' />
 
-                              {/* Thanh màu vàng cho Node.js */}
-                              <SkillBar name="Tailwind CSS" level="Advanced" barColor="#5d8145" />
+					{/* Thanh màu tím cho HTML */}
+					<SkillBar name='C++' level='Basic' barColor='#df06f3b0' />
+				</div>
 
-                              {/* Thanh màu tím cho HTML */}
-                              <SkillBar name="C++" level="Basic" barColor="#df06f3b0" />
-
-
-                  </div>
-
-                  <button style={{marginTop: '25px'}}>View Resume</button>
-                  
-        </div>
-        <div className={styles.section} style={{flexDirection: 'column', alignItems: 'center', padding: '5px'}}>
-          <h1 style={{color: '#ffffff', fontWeight: 'bold'}}>Testimonials</h1>
-          <p style={{color: '#ffffff', fontSize: '1.2em', fontWeight: 'normal', marginBottom: '2px', marginTop: '-10px'}}>Hear what others have to say about my work ethic and skills:</p>
-        </div>
-        <div className={styles.section}>
-          <div className={styles.column4}>
-              <TestimonialCard 
-            name="Shinehah Remion"
-            title="Business Management in HR and Marketing-BYUH"
-            date="Jan 2025"
-            comment="Working with Michael, I observed a rare combination of efficiency and deep observation. He didn't just work fast; he improved how we worked by identifying and solving process bottlenecks that caused team fatigue. His natural inclination toward analyzing systems and solving real-world problems makes him a valuable asset to any technical team. He is a focused, consistent, and highly capable problem solver."
-            imageUrl="/Portfolio-Website-Michael-Bui/shine.jpg"
-            linkedinUrl="https://www.linkedin.com/in/shinehah-remion/"
-          />
-          </div>
-          <div className={styles.column5}>
-              <TestimonialCard 
-            name="Lewis Hassell"
-            title="Professor of Pathology at University of Oklahoma Health Sciences Center"
-            date="Jan 2026"
-            comment="In working with Micheal when he was a volunteer in Vietnam, I found him to be a very dedicated hard worker. He managed complex issues with many types of people quite well and yet also remained focused on his core purposes. He is very even tempered and was never frustrated, despite some very challenging co-workers."
-            imageUrl="/Portfolio-Website-Michael-Bui/hussel.jpg"
-            linkedinUrl="https://www.linkedin.com/in/lewis-hassell-6898966/"
-          />
-          </div>
-          <div className={styles.column6}>
-               <TestimonialCard 
-            name="Julius Such"
-            title="The former supervisor at the Polynesian Cultural Center-Hawaii"
-            date="Jan 2026"
-            comment="I am Julius Such, former supervisor of Michael Bui at the Polynesian Cultural Center on the Smoothie Team. During a challenging period when the position had high turnover, Michael consistently stepped up, improved our work processes, and helped make the team more efficient. He was also a great teammate who contributed to a positive work environment."
-            imageUrl="/Portfolio-Website-Michael-Bui/julius.jpeg"
-            linkedinUrl="https://www.linkedin.com/in/julius-such-060a091b5/"
-          />
-          </div>
-         
-        </div>
-         <div className={styles.section} style={{flexDirection: 'column', alignItems: 'center', padding: '5px'}}>
-          <h1 style={{color: '#ffffff', fontWeight: 'bold'}}>Certificates</h1>
-          <p style={{color: '#ffffff', fontSize: '1.2em', fontWeight: 'normal', marginBottom: '50px', marginTop: '-10px'}}>Technical certifications and credentials that fuel my growth as a Software Engineer:</p>
-        </div>
-                <section className={styles.carouselSection}>
-                  <CertificateCarousel />
-                </section>
-        <div className={styles.section} style={{flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#1a1919', maxWidth: '100vw', width: '100%'}}>
-          <h2 style={{color: '#ffffff', fontSize: '1em', fontWeight: 'normal', marginBottom: '10px', marginTop: '10px'}}>© 2026 Michael Bui. All rights reserved.</h2>
-        </div>
-    </div>
-    
-  )
+				<button style={{ marginTop: '25px' }}>View Resume</button>
+			</div>
+			<div className={styles.section} style={{ flexDirection: 'column', alignItems: 'center', padding: '5px' }}>
+				<h1 style={{ color: '#ffffff', fontWeight: 'bold' }}>Testimonials</h1>
+				<p style={{ color: '#ffffff', fontSize: '1.2em', fontWeight: 'normal', marginBottom: '2px', marginTop: '-10px' }}>
+					Hear what others have to say about my work ethic and skills:
+				</p>
+			</div>
+			<div className={styles.section}>
+				<div className={styles.column4}>
+					<TestimonialCard
+						name='Shinehah Remion'
+						title='Business Management in HR and Marketing-BYUH'
+						date='Jan 2025'
+						comment="Working with Michael, I observed a rare combination of efficiency and deep observation. He didn't just work fast; he improved how we worked by identifying and solving process bottlenecks that caused team fatigue. His natural inclination toward analyzing systems and solving real-world problems makes him a valuable asset to any technical team. He is a focused, consistent, and highly capable problem solver."
+						imageUrl='/Portfolio-Website-Michael-Bui/shine.jpg'
+						linkedinUrl='https://www.linkedin.com/in/shinehah-remion/'
+					/>
+				</div>
+				<div className={styles.column5}>
+					<TestimonialCard
+						name='Lewis Hassell'
+						title='Professor of Pathology at University of Oklahoma Health Sciences Center'
+						date='Jan 2026'
+						comment='In working with Micheal when he was a volunteer in Vietnam, I found him to be a very dedicated hard worker. He managed complex issues with many types of people quite well and yet also remained focused on his core purposes. He is very even tempered and was never frustrated, despite some very challenging co-workers.'
+						imageUrl='/Portfolio-Website-Michael-Bui/hussel.jpg'
+						linkedinUrl='https://www.linkedin.com/in/lewis-hassell-6898966/'
+					/>
+				</div>
+				<div className={styles.column6}>
+					<TestimonialCard
+						name='Julius Such'
+						title='The former supervisor at the Polynesian Cultural Center-Hawaii'
+						date='Jan 2026'
+						comment='I am Julius Such, former supervisor of Michael Bui at the Polynesian Cultural Center on the Smoothie Team. During a challenging period when the position had high turnover, Michael consistently stepped up, improved our work processes, and helped make the team more efficient. He was also a great teammate who contributed to a positive work environment.'
+						imageUrl='/Portfolio-Website-Michael-Bui/julius.jpeg'
+						linkedinUrl='https://www.linkedin.com/in/julius-such-060a091b5/'
+					/>
+				</div>
+			</div>
+			<div className={styles.section} style={{ flexDirection: 'column', alignItems: 'center', padding: '5px' }}>
+				<h1 style={{ color: '#ffffff', fontWeight: 'bold' }}>Certificates</h1>
+				<p style={{ color: '#ffffff', fontSize: '1.2em', fontWeight: 'normal', marginBottom: '50px', marginTop: '-10px' }}>
+					Technical certifications and credentials that fuel my growth as a Software Engineer:
+				</p>
+			</div>
+			<section className={styles.carouselSection}>
+				<CertificateCarousel />
+			</section>
+			<div
+				className={styles.section}
+				style={{
+					flexDirection: 'column',
+					alignItems: 'center',
+					padding: '20px',
+					backgroundColor: '#1a1919',
+					maxWidth: '100vw',
+					width: '100%',
+				}}
+			>
+				<h2 style={{ color: '#ffffff', fontSize: '1em', fontWeight: 'normal', marginBottom: '10px', marginTop: '10px' }}>
+					© 2026 Michael Bui. All rights reserved.
+				</h2>
+			</div>
+		</div>
+	);
 }
-     
- 
- 
 
-
-export default App
+export default App;
